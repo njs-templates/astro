@@ -6,7 +6,9 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"fmt": "prettier --write .",
+		"lint": "prettier --write . && eslint ."
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.5.0",
