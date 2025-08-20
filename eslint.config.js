@@ -17,10 +17,11 @@ export default defineConfig([
 		"**/.env",
 		"**/.env.*",
 		"!**/.env.example",
-		"**/pnpm-lock.yaml",
-		"**/package-lock.json",
-		"**/yarn.lock",
+		"pnpm-lock.yaml",
+		"package-lock.json",
+		"yarn.lock",
 		"**/dist/",
+		".astro/",
 	]),
 	{
 		files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
@@ -49,10 +50,19 @@ export default defineConfig([
 	{
 		files: ["**/*.md"],
 		plugins: { markdown },
-		language: "markdown/commonmark",
+		language: "markdown/gfm",
 		extends: ["markdown/recommended"],
 	},
-	{ files: ["**/*.css"], plugins: { css }, language: "css/css", extends: ["css/recommended"] },
+	{
+		files: ["**/*.css"],
+		plugins: { css },
+		language: "css/css",
+		extends: ["css/recommended"],
+		rules: {
+			// This rule just causes a lot of problems with Tailwind.
+			"css/no-invalid-at-rules": "off",
+		},
+	},
 	tseslint.configs.recommended,
 
 	// The new stupid eslint config format broke the astro eslint plugin
