@@ -7,6 +7,7 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
+		"test": "vitest",
 		"fmt": "prettier --write .",
 		"lint": "prettier --write . && eslint ."
 	},
@@ -28,6 +29,7 @@
 		"prettier-plugin-astro": "0.14.1",
 		"tailwindcss": "^4.1.12",
 		"typescript": "^5.9.2",
-		"typescript-eslint": "^8.40.0"
+		"typescript-eslint": "^8.40.0",
+		"vitest": "^3.2.4"
 	}
 }
