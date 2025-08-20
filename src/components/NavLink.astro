@@ -1,0 +1,28 @@
+---
+const relativeUrl = new URL(Astro.url).pathname; // current page URL
+let currentPage = false;
+
+// Removes the trailing "/" from the input relative url.
+function cleanRelativeUrl(relativeUrl: string) {
+	if (relativeUrl.endsWith("/")) {
+		// Remove the trailing /
+		return relativeUrl.replace(/\/$/, "");
+	}
+
+	// Do nothing if it doesn't end with "/".
+	return relativeUrl;
+}
+
+const { href, label } = Astro.props;
+
+if (cleanRelativeUrl(relativeUrl) == cleanRelativeUrl(href)) {
+	currentPage = true;
+}
+---
+
+<a
+	href={href}
+	class={currentPage ? "tab tab-active text-primary" : "tab text-base-content! hover:underline!"}
+>
+	{label}
+</a>

@@ -2,10 +2,77 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
+import { Image } from "astro:assets";
+import astro from "../assets/astro.svg";
+// import tailwind from "../assets/tailwind.svg";
+import daisyui from "../assets/daisyui.svg";
+import typescript from "../assets/typescript.svg";
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Astro site">
+	<div class="main-content">
+		<div class="grid grid-cols-3 justify-items-center space-y-5">
+			<a
+				href="https://astro.build/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<Image
+					src={astro}
+					alt="Astro logo"
+					class="logo astro"
+				/>
+			</a>
+			<a
+				href="https://daisyui.com/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<Image
+					src={daisyui}
+					alt="daisyUI logo"
+					class="logo daisyui"
+				/>
+			</a>
+			<a
+				href="https://www.typescriptlang.org/"
+				target="_blank"
+				rel="noreferrer"
+			>
+				<Image
+					src={typescript}
+					alt="Typescript logo"
+					class="logo typescript"
+				/>
+			</a>
+		</div>
+		<Welcome />
+	</div>
 </Layout>
+
+<style scoped>
+	.logo {
+		height: 10em;
+		padding: 1.5em;
+		will-change: filter;
+	}
+
+	.logo:hover {
+		filter: drop-shadow(0 0 2em #646cffaa);
+	}
+
+	.logo.astro:hover {
+		filter: drop-shadow(0 0 2em #ffb86aaa);
+	}
+
+	.logo.daisyui:hover {
+		filter: drop-shadow(0 0 2em #ffd420aa);
+	}
+
+	.logo.ts:hover {
+		filter: drop-shadow(0 0 2em #3178c6aa);
+	}
+</style>
