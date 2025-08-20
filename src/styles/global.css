@@ -1,8 +1,9 @@
-/* Delete this url */
+/* Change or delete this url to adjust the default font. */
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap") layer(base);
 
 @import "tailwindcss";
 @plugin "daisyui" {
+	/* Change daisyUI settings here */
 	themes: night --default;
 }
 
