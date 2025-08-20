@@ -40,17 +40,19 @@ If no one on your team is using VS Code, just delete the `.vscode/` folder.
 
 ## Next steps
 
-- [ ] Run `pnpm dev` to start Astro and make sure everything's working.
-- [ ] Run `pnpm test` to make sure Vitest is working.
-- [ ] In `package.json`, change the project name and version.
-- [ ] Delete the following:
-    - [ ] `LICENSE.txt` from the root of the directory.
+1. Run `pnpm dev` to start Astro and make sure everything's working.
+2. Run `pnpm build` to make sure that building works.
+3. Run `pnpm test` to make sure Vitest is working.
+4. In `package.json`, change the project name and version.
+5. Delete the following:
+    1. `LICENSE.txt` from the root of the directory.
         - If your project still uses an MIT License, just edit the author and year.
-    - [ ] The boilerplate from `src/components`,
+	2. Either delete `CHANGELOG.md` or remove its contents.
+    3. The boilerplate from `src/components`,
           `src/assets` and `src/scripts`.
-    - [ ] `pnpm-lock.yaml` if you want to use a different package manager.
-    - [ ] The `.git/` folder if you cloned this repo.
-- [ ] Run a `git init` to start tracking changes.
+    4. `pnpm-lock.yaml` if you want to use a different package manager.
+    5. The `.git/` folder if you cloned this repo.
+6. Run a `git init` to start tracking changes.
 
 After all that, do whatever. This code is yours now.
 Credit is appreciated but not needed.
