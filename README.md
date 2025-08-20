@@ -1,46 +1,55 @@
-# Astro Starter Kit: Basics
+# njs-guy's Astro Template
 
-```sh
-pnpm create astro@latest -- --template basics
+A nice and simple Astro template to let me (or anyone else)
+quickly whip up new projects.
+
+## Features
+- [Astro](https://astro.build/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [PNPM](https://pnpm.io/) for package management
+- [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
+    with some sensible defaults.
+- [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+- [Vitest](https://vitest.dev/) for testing
+
+## Coding style
+
+This ESLint and Prettier config uses double-quotes and semicolons.
+
+```ts
+const msg = "wow";
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Installation
 
-## 🚀 Project Structure
+You can download this repo as a .zip or clone it with git,
+but a cleaner approach is with [degit](https://github.com/Rich-Harris/degit).
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+```bash
+npx degit njs-templates/astro new-project
+cd new-project
+pnpm i
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Recommended IDE
 
-## 🧞 Commands
+This was meant to be used with VS Code, but it should work with any editor.
+You'll be prompted to install any recommended extensions that aren't installed.
+If no one on your team is using VS Code, just delete the `.vscode/` folder.
 
-All commands are run from the root of the project, from a terminal:
+## Next steps
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+- [ ] Run `pnpm dev` to start Astro and make sure everything's working.
+- [ ] Run `pnpm test` to make sure Vitest is working.
+- [ ] In `package.json`, change the project name and version.
+- [ ] Delete the following:
+    - [ ] `LICENSE.txt` from the root of the directory.
+        - If your project still uses an MIT License, just edit the author and year.
+    - [ ] The boilerplate from `src/components`,
+`src/assets` and `src/scripts`.
+	- [ ] `pnpm-lock.yaml` if you want to use a different package manager.
+    - [ ] The `.git/` folder if you cloned this repo.
+- [ ] Run a `git init` to start tracking changes.
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+After all that, do whatever. This code is yours now.
+Credit is appreciated but not needed.
