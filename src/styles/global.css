@@ -19,6 +19,10 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+a:not(.nav-link) {
+	@apply link link-info link-hover;
+}
+
 h1 {
 	@apply text-5xl font-bold;
 }
