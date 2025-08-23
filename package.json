@@ -9,7 +9,7 @@
 		"astro": "astro",
 		"test": "vitest",
 		"fmt": "prettier --write .",
-		"lint": "prettier --write . && eslint ."
+		"lint": "prettier --check . && eslint ."
 	},
 	"devDependencies": {
 		"@astrojs/sitemap": "^3.5.0",

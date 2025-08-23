@@ -47,9 +47,9 @@ If no one on your team is using VS Code, just delete the `.vscode/` folder.
 5. Delete the following:
     1. `LICENSE.txt` from the root of the directory.
         - If your project still uses an MIT License, just edit the author and year.
-	2. Either delete `CHANGELOG.md` or remove its contents.
+    2. Either delete `CHANGELOG.md` or remove its contents.
     3. The boilerplate from `src/components`,
-          `src/assets` and `src/scripts`.
+       `src/assets` and `src/scripts`.
     4. `pnpm-lock.yaml` if you want to use a different package manager.
     5. The `.git/` folder if you cloned this repo.
 6. Run a `git init` to start tracking changes.
